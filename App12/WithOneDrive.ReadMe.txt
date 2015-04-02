@@ -1,0 +1,23 @@
+﻿How to use "WithOneDrive for Windows Store Apps"
+
+1. Register the application with the store, to use OneDrive. (Windows Store Only)
+http://msdn.microsoft.com/en-us/library/live/hh826541.aspx
+
+2. Connect to Live, and get session object. 
+	LiveConnectSession session = await OneDrive.SigninAsync();
+
+3. Create stream object of the file uploading, and upload the file.
+	var stream = new Windows.Storage.Streams.InMemoryRandomAccessStream();
+	var writer = new Windows.Storage.Streams.DataWriter(stream);
+	writer.WriteString("Test" + DateTime.UtcNow.ToString());
+	await writer.StoreAsync();
+	await writer.FlushAsync();
+	stream.Seek(0);
+	var r = await OneDrive.UploadFileAsync(session, "FolderName", "FileName.txt", stream);
+
+4. Download the file, and open stream object of the file downloaded.
+	var r = await OneDrive.DownloadFileAsync(session, "FolderName", "FileName.txt");
+	using (var reader = new System.IO.StreamReader(r.DownaloadFileStream.AsStreamForRead())) {
+		var text = reader.ReadToEnd();
+		Debug.WriteLine(text);
+	} // end using reader

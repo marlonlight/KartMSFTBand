@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
+  <Identity Name="41904MarlonLuz.GoKartBand" Publisher="CN=66467B90-2758-4D2A-82A6-7980FFBE6980" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="24188e99-bb68-4b7c-8e5f-072e4c6cdbbb" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>GoKart Band</DisplayName>
+    <PublisherDisplayName>Marlon Luz</PublisherDisplayName>
+    <Logo>Assets\capacete120.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.1</OSMinVersion>
+    <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="App12.App">
+      <m3:VisualElements DisplayName="GoKart Band" Square150x150Logo="Assets\capacete360.png" Square44x44Logo="Assets\capacete106.png" Description="App12" ForegroundText="light" BackgroundColor="transparent">
+        <m3:DefaultTile Wide310x150Logo="Assets\capaceteWide.png" Square71x71Logo="Assets\capacete170.png">
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\capaceteSplash.png" />
+      </m3:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+    <DeviceCapability Name="location" />
+    <DeviceCapability Name="proximity" />
+    <DeviceCapability Name="bluetooth.rfcomm" xmlns="http://schemas.microsoft.com/appx/2013/manifest">
+      <Device Id="any">
+        <!-- Used by the Microsoft Band SDK Preview -->
+        <Function Type="serviceId:A502CA9A-2BA5-413C-A4E0-13804E47B38F" />
+        <!-- Used by the Microsoft Band SDK Preview -->
+        <Function Type="serviceId:C742E1A2-6320-5ABC-9643-D206C677E580" />
+      </Device>
+    </DeviceCapability>
+  </Capabilities>
+</Package>

@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="App12.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App12"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:live="using:Microsoft.Live"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <ScrollViewer Height="620" VerticalScrollBarVisibility="Visible" VerticalScrollMode="Enabled">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Sign In" Click="Button_SignIn_Click"/>
+
+                    <Button Content="Upload File" Margin="30,0,0,0" Click="Button_UploadFile_Click"/>
+                    
+                    <Button Content="open file" Margin="25,0,0,0" Click="Button_Click_4"/>
+                </StackPanel>
+
+                <TextBlock Name="tbLive" FontSize="20" TextWrapping="Wrap"/>
+
+                <Button Content="Connect" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="Button_Click"/>
+                <Button Content="Disconnect" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="Button_Click_1"/>
+
+                <TextBlock Name="tbHeart" Text="Heart Rate:" FontSize="30" TextWrapping="Wrap"/>
+                <TextBlock Name="tbTemp" Text="Temperature:" FontSize="30" TextWrapping="Wrap"/>
+                <TextBlock Name="tbLat" Text="Lat:" FontSize="30" TextWrapping="Wrap"/>
+                <TextBlock Name="tbLong" Text="Long:" FontSize="30" TextWrapping="Wrap"/>
+                <TextBlock Name="tbAlt" Text="Altitude:" FontSize="30" TextWrapping="Wrap"/>
+                <Button Content="LAP" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="Button_Click_2"/>
+                <TextBlock Name="tbLapLat" Text="LapLat:" FontSize="30" TextWrapping="Wrap"/>
+                <TextBlock Name="tbLapLong" Text="LapLong:" FontSize="30" TextWrapping="Wrap"/>
+                <TextBlock Name="tbTimeLap" Text="Time:" FontSize="30" TextWrapping="Wrap"/>
+                <TextBlock Name="tbHeartRate" Text="heartRate:" FontSize="30" TextWrapping="Wrap"/>
+                <TextBlock Name="tbTemperature" Text="Temps:" FontSize="30" TextWrapping="Wrap"/>
+            </StackPanel>
+        </ScrollViewer>
+
+    </StackPanel>
+</Page>
